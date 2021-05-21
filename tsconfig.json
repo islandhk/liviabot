@@ -23,6 +23,7 @@
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "pretty": true
+    "pretty": true,
+    "removeComments": true
   }
 }
