@@ -1,4 +1,4 @@
-import Command from "../struct/Command";
+import Command from "../../struct/Command";
 import { Message } from "discord.js";
 
 abstract class Marcus extends Command {
