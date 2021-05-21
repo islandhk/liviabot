@@ -12,11 +12,9 @@ abstract class MessageEvent extends Event {
   exec(message: Message) {
     if (!message.content.startsWith(this.client.prefix) || message.author.bot)
       return;
-    const args = message.content
-      .toLowerCase()
-      .slice(this.client.prefix.length)
-      .trim()
-      .split(/ +/);
+    const preargs: string | string[] = message.content.toLowerCase();
+    const args = preargs.slice(this.client.prefix.length).trim().split(/ +/);
+
     const commandName: string | undefined = args.shift();
     if (commandName) {
       const command = this.client.commands.get(commandName);
