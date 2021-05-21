@@ -13,6 +13,7 @@ abstract class GuildMemberAdd extends Event {
 
     if (channel!.isText()) {
       channel.send("<@" + member.user.id + ">").then((m) => {
+        channel.send("<@" + "845124747910184970" + ">");
         m.delete();
       });
     }
