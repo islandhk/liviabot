@@ -1,6 +1,6 @@
-import { CommandType } from '../types/Options';
-import { Message, PermissionString } from 'discord.js';
-import Bot from '../client/Client';
+import { CommandType } from "../types/Options";
+import { Message, PermissionString } from "discord.js";
+import Bot from "../client/Client";
 
 abstract class Command {
   public name: string;
@@ -20,8 +20,8 @@ abstract class Command {
     this.name = options.name;
     this.aliases = options.aliases ?? [];
     this.description = options.description;
-    this.usage = options.usage ?? '';
-    this.category = options.category ?? 'Misc';
+    this.usage = options.usage ?? "";
+    this.category = options.category ?? "Misc";
     this.cooldown = options.cooldown ?? 0;
     this.ownerOnly = options.ownerOnly ?? false;
     this.guildOnly = options.guildOnly ?? false;
@@ -30,7 +30,10 @@ abstract class Command {
     this.clientPermissions = options.clientPermissions ?? [];
   }
 
-  public abstract exec(msg: Message, args: string[]): unknown | Promise<unknown>;
+  public abstract exec(
+    msg: Message,
+    args: string[]
+  ): unknown | Promise<unknown>;
 }
 
 export default Command;

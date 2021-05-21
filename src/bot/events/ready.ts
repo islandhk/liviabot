@@ -1,15 +1,15 @@
-import Event from '../struct/Event';
+import Event from "../struct/Event";
 
 abstract class ReadyEvent extends Event {
   constructor() {
     super({
-      name: 'ready',
+      name: "ready",
       once: true,
     });
   }
 
   async exec() {
-    console.log('Ready!');
+    console.log("Ready!");
   }
 }
 

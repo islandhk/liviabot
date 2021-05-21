@@ -1,7 +1,10 @@
-import { Client, Collection } from 'discord.js';
-import { CommandRegistry, EventRegistry } from '../struct/registries/export/RegistryIndex';
-import { CommandOptions, EventOptions } from '../types/Options';
-import settings from '../settings';
+import { Client, Collection } from "discord.js";
+import {
+  CommandRegistry,
+  EventRegistry,
+} from "../struct/registries/export/RegistryIndex";
+import { CommandOptions, EventOptions } from "../types/Options";
+import settings from "../settings";
 
 class Bot extends Client {
   public prefix: string;
@@ -15,7 +18,7 @@ class Bot extends Client {
   public constructor() {
     super({
       /* Discord JS Client Options */
-      disableMentions: 'everyone',
+      disableMentions: "everyone",
     });
 
     this.prefix = settings.PREFIX;

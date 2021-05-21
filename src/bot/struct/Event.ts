@@ -1,5 +1,5 @@
-import { EventOptions } from '../types/Options';
-import Bot from '../client/Client'
+import { EventOptions } from "../types/Options";
+import Bot from "../client/Client";
 
 abstract class Event {
   public name: string;
