@@ -4,8 +4,8 @@ import { Message } from "discord.js";
 abstract class ChengXi extends Command {
   constructor() {
     super({
-      name: "sebasitan",
-      aliases: ["seb"],
+      name: "chengxi",
+      aliases: ["cheng"],
       description: "seb",
     });
   }
