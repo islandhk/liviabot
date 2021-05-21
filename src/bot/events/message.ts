@@ -21,6 +21,7 @@ abstract class MessageEvent extends Event {
       for (let word of args) {
         const command = this.client.commands.get(word);
         if (command) {
+          console.log(message.author.tag + " used " + commandName);
           if (
             command.ownerOnly &&
             !settings.BOT_OWNER_ID.includes(message.author.id)
@@ -117,6 +118,7 @@ abstract class MessageEvent extends Event {
 
       const command = this.client.commands.get(commandName);
       if (command) {
+        console.log(message.author.tag + " used " + commandName);
         if (
           command.ownerOnly &&
           !settings.BOT_OWNER_ID.includes(message.author.id)
