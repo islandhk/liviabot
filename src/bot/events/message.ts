@@ -13,6 +13,7 @@ abstract class MessageEvent extends Event {
     if (!message.content.startsWith(this.client.prefix) || message.author.bot)
       return;
     const args = message.content
+      .toLowerCase()
       .slice(this.client.prefix.length)
       .trim()
       .split(/ +/);
