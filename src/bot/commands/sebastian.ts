@@ -4,7 +4,7 @@ import { Message } from "discord.js";
 abstract class Sebastian extends Command {
   constructor() {
     super({
-      name: "sebasitan",
+      name: "sebastian",
       aliases: [],
       description: "seb",
     });
