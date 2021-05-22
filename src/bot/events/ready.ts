@@ -9,6 +9,10 @@ abstract class ReadyEvent extends Event {
   }
 
   async exec() {
+    this.client.user!.setActivity("out for kids who I can punish", {
+      type: "WATCHING",
+    });
+
     setInterval(() => {
       this.client.user!.setActivity("out for kids who I can punish", {
         type: "WATCHING",
