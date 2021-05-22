@@ -12,6 +12,7 @@ abstract class Command {
   public ownerOnly: boolean;
   public guildOnly: boolean;
   public requiredArgs: number;
+  public cultOnly: boolean;
   public userPermissions: PermissionString[];
   public clientPermissions: PermissionString[];
   public abstract client: Bot;
@@ -26,6 +27,7 @@ abstract class Command {
     this.ownerOnly = options.ownerOnly ?? false;
     this.guildOnly = options.guildOnly ?? false;
     this.requiredArgs = options.requiredArgs ?? 0;
+    this.cultOnly = options.cultOnly ?? false;
     this.userPermissions = options.userPermissions ?? [];
     this.clientPermissions = options.clientPermissions ?? [];
   }

@@ -20,8 +20,19 @@ abstract class MessageEvent extends Event {
     if (commandName) {
       for (let word of args) {
         const command = this.client.commands.get(word);
+
         if (command) {
           console.log(message.author.tag + " used " + commandName);
+
+          if (command.cultOnly) {
+            if (message.guild instanceof DMChannel) return;
+            if (message.guild instanceof Guild) {
+              if (message.guild.id !== settings.CULT_ID) {
+                return;
+              }
+            }
+          }
+
           if (
             command.ownerOnly &&
             !settings.BOT_OWNER_ID.includes(message.author.id)
@@ -33,13 +44,6 @@ abstract class MessageEvent extends Event {
             return message.channel.send(
               "This command can only be used in a guild."
             );
-          } else if (command.cultOnly) {
-            if (message.guild instanceof DMChannel) return;
-            if (message.guild instanceof Guild) {
-              if (message.guild.id !== settings.CULT_ID) {
-                return;
-              }
-            }
           }
 
           if (message.channel instanceof TextChannel) {
@@ -127,6 +131,16 @@ abstract class MessageEvent extends Event {
       const command = this.client.commands.get(commandName);
       if (command) {
         console.log(message.author.tag + " used " + commandName);
+
+        if (command.cultOnly) {
+          if (message.guild instanceof DMChannel) return;
+          if (message.guild instanceof Guild) {
+            if (message.guild.id !== settings.CULT_ID) {
+              return;
+            }
+          }
+        }
+
         if (
           command.ownerOnly &&
           !settings.BOT_OWNER_ID.includes(message.author.id)
@@ -138,13 +152,6 @@ abstract class MessageEvent extends Event {
           return message.channel.send(
             "This command can only be used in a guild."
           );
-        } else if (command.cultOnly) {
-          if (message.guild instanceof DMChannel) return;
-          if (message.guild instanceof Guild) {
-            if (message.guild.id !== settings.CULT_ID) {
-              return;
-            }
-          }
         }
 
         if (message.channel instanceof TextChannel) {
