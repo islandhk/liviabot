@@ -1,5 +1,5 @@
 import Event from "../struct/Event";
-import { Message, TextChannel, Guild, Collection } from "discord.js";
+import { Message, TextChannel, Guild, Collection, DMChannel } from "discord.js";
 import settings from "../settings";
 
 abstract class MessageEvent extends Event {
@@ -134,7 +134,12 @@ abstract class MessageEvent extends Event {
             "This command can only be used in a guild."
           );
         } else if (command.cultOnly) {
-          return;
+          if (message.guild instanceof DMChannel) return;
+          if (message.guild instanceof Guild) {
+            if (message.guild.id !== settings.CULT_ID) {
+              return;
+            }
+          }
         }
 
         if (message.channel instanceof TextChannel) {
