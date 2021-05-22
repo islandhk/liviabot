@@ -13,9 +13,9 @@ abstract class GuildMemberAdd extends Event {
 
     if (channel!.isText()) {
       channel.send(
-        "<@" +
+        "<@&" +
           "845124747910184970" +
-          ">" +
+          ">, " +
           "<@" +
           member.user.id +
           ">" +
