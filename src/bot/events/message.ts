@@ -33,7 +33,19 @@ abstract class MessageEvent extends Event {
             return message.channel.send(
               "This command can only be used in a guild."
             );
+          } else if (command.cultOnly) {
+            if (message.guild instanceof Guild) {
+              if (message.guild.id !== settings.CULT_ID) {
+                return message.channel.send(
+                  "This command can only be used in the cult."
+                );
+              }
+              return message.channel.send(
+                "This command can only be used in the cult."
+              );
+            }
           }
+
           if (message.channel instanceof TextChannel) {
             const userPermissions = command.userPermissions;
             const clientPermissions = command.clientPermissions;

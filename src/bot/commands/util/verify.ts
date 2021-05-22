@@ -9,6 +9,7 @@ abstract class Verify extends Command {
       description: "Verify user",
       requiredArgs: 1,
       userPermissions: ["MANAGE_ROLES"],
+      cultOnly: true,
     });
   }
 

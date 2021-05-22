@@ -12,6 +12,7 @@ export interface CommandOptions {
   requiredArgs?: number;
   userPermissions?: PermissionString[];
   clientPermissions?: PermissionString[];
+  cultOnly?: boolean;
   exec: (msg: Message, args: string[]) => unknown | Promise<unknown>;
 }
 
