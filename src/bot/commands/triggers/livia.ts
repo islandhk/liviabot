@@ -11,7 +11,7 @@ abstract class IB extends Command {
   }
 
   exec(message: Message) {
-    return message.channel.send("Yes?");
+    return message.channel.send("Yes.");
   }
 }
 
