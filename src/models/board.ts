@@ -1,7 +1,7 @@
-import mongoose, { Schema, Document } from "mongoose";
+import mongoose, { Schema } from "mongoose";
 import { User } from "discord.js";
 
-export interface IBoard extends Document {
+export interface IBoard {
   contents: string;
   timestamp: string;
   channelID: string;
@@ -15,4 +15,5 @@ const BoardSchema = new Schema<IBoard>({
   author: { type: Object, required: true },
 });
 
-export default mongoose.model<IBoard>("Board", BoardSchema);
+const Board = mongoose.model<IBoard>("Board", BoardSchema);
+export default Board;
