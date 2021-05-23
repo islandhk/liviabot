@@ -4,7 +4,7 @@ import { sync } from "glob";
 import { resolve } from "path";
 
 const registerEvents: Function = (client: Bot) => {
-  const eventFiles = sync(resolve("src/bot/events/**/*"));
+  const eventFiles = sync(resolve(__dirname + "/../../events/**/*"));
   eventFiles.forEach((file) => {
     if (/\.(j|t)s$/iu.test(file)) {
       const File = require(file).default;
