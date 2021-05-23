@@ -19,7 +19,7 @@ abstract class ReadyEvent extends Event {
       });
     }, 3600000);
 
-    console.log("Ready!");
+    console.log("[Bot] Ready.");
   }
 }
 

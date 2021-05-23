@@ -22,7 +22,9 @@ abstract class MessageEvent extends Event {
         const command = this.client.commands.get(word);
 
         if (command) {
-          console.log(message.author.tag + " used " + commandName);
+          console.log(
+            "[Command] " + message.author.tag + " used " + commandName + "."
+          );
 
           if (command.cultOnly) {
             if (message.guild instanceof DMChannel) return;
@@ -130,7 +132,9 @@ abstract class MessageEvent extends Event {
 
       const command = this.client.commands.get(commandName);
       if (command) {
-        console.log(message.author.tag + " used " + commandName);
+        console.log(
+          "[Command] " + message.author.tag + " used " + commandName + "."
+        );
 
         if (command.cultOnly) {
           if (message.guild instanceof DMChannel) return;

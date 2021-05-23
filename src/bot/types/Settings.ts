@@ -3,4 +3,5 @@ export interface Settings {
   BOT_OWNER_ID: Array<string>;
   PREFIX: string;
   CULT_ID: string;
+  DB: string;
 }
