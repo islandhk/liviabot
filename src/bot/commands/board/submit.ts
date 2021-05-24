@@ -44,7 +44,7 @@ abstract class Submit extends Command {
               "https://cdn.discordapp.com/attachments/845125088604979241/845128408072978462/SPOILER_unknown.png"
           );
         channel.send(embed);
-        channel.send("<@&846312598790078464>").then((m) => m.delete());
+        channel.send("<@&846312598790078464>");
 
         return message.channel
           .send(
