@@ -5,11 +5,10 @@ import Board from "../../../models/board";
 abstract class Deny extends Command {
   constructor() {
     super({
-      name: "approve",
-      aliases: ["!a", "!approve"],
-      description: "Approve [admin only]",
+      name: "deny",
+      aliases: ["!d", "!deny"],
+      description: "Deny [admin only]",
       cultOnly: true,
-      userPermissions: ["ADMINISTRATOR"],
     });
   }
 

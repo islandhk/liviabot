@@ -10,7 +10,6 @@ abstract class Approve extends Command {
       aliases: ["!a", "!approve"],
       description: "Approve [admin only]",
       cultOnly: true,
-      userPermissions: ["ADMINISTRATOR"],
     });
   }
 
