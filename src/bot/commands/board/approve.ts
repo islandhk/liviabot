@@ -1,6 +1,6 @@
-import Command from "../struct/Command";
+import Command from "../../struct/Command";
 import { Message, TextChannel } from "discord.js";
-import Board from "../../models/board";
+import Board from "../../../models/board";
 import { MessageEmbed } from "discord.js";
 
 abstract class Approve extends Command {

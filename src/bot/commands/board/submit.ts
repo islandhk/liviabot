@@ -1,6 +1,6 @@
-import Command from "../struct/Command";
+import Command from "../..//struct/Command";
 import { Message } from "discord.js";
-import Board from "../../models/board";
+import Board from "../../../models/board";
 import { MessageEmbed } from "discord.js";
 
 abstract class Submit extends Command {
