@@ -39,7 +39,7 @@ abstract class Submit extends Command {
           .addField("Contents", arg)
           .setTimestamp()
           .setFooter(
-            "Approve or deny? Run !approve or !deny.",
+            "Approve or deny? Run 'approve' or 'deny'.",
             message.author.avatarURL() ??
               "https://cdn.discordapp.com/attachments/845125088604979241/845128408072978462/SPOILER_unknown.png"
           );

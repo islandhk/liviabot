@@ -1,16 +1,16 @@
 import mongoose, { Schema } from "mongoose";
 import { User } from "discord.js";
 
-export interface IBoard {
+interface IBoard {
   contents: string;
-  timestamp: string;
+  timestamp: number;
   channelID: string;
   author: User;
 }
 
 const BoardSchema = new Schema<IBoard>({
   contents: { type: String, required: true },
-  timestamp: { type: String, required: true },
+  timestamp: { type: Number, required: true },
   channelID: { type: String, required: true },
   author: { type: Object, required: true },
 });
