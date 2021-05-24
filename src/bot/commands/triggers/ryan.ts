@@ -1,10 +1,10 @@
 import Command from "../../struct/Command";
 import { Message } from "discord.js";
 
-abstract class Doris extends Command {
+abstract class Ryan extends Command {
   constructor() {
     super({
-      name: "doris",
+      name: "ryan",
       aliases: [],
       description: "idk",
     });
@@ -12,9 +12,9 @@ abstract class Doris extends Command {
 
   exec(message: Message) {
     return message.channel.send(
-      "Ai yah~~ Doris. You forgot to hand in work for 17th time! But I will not punish you because I love you. You are my precious child."
+      "RYAN. HAND IN YOUR WORK NOW OR I WILL GIVE YOU 0. YOU THINK YOU GET 8 MAAKS YOU GET EXTEMPTIONS? NO. IDOT."
     );
   }
 }
 
-export default Doris;
+export default Ryan;
