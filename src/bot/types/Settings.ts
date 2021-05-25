@@ -4,4 +4,5 @@ export interface Settings {
   PREFIX: string;
   CULT_ID: string;
   DB: string;
+  ICS: string;
 }

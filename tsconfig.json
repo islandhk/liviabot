@@ -1,5 +1,6 @@
 {
   "include": ["src"],
+  "exclude": ["interface.ts"],
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "dist",
