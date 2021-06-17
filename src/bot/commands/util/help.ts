@@ -5,8 +5,8 @@ import { stripIndents } from "common-tags";
 abstract class HelpCommand extends Command {
   constructor() {
     super({
-      name: "help",
-      aliases: ["h"],
+      name: "!help",
+      aliases: ["!h"],
       description: "Display a list of all my commands!",
     });
   }
