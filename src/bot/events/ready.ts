@@ -9,7 +9,7 @@ abstract class ReadyEvent extends Event {
   }
 
   async exec() {
-    this.client.user!.setActivity("out for kids who I can punish", {
+    this.client.user!.setActivity("-help | IB is life. IB is god.", {
       type: "WATCHING",
     });
 
